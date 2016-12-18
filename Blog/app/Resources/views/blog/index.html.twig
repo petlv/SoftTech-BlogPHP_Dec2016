@@ -4,13 +4,13 @@
     <div class="container body-content">
         <div class="row">
             <div class="col-md-2">
-                <h2>List</h2>
+                <h2>Дестинация</h2>
                 {% for category in categories %}
                     <div class="col-md-10">
                         <ul>
                             <li>
                                 <a href="{{ path('category_articles', {'id': category.id}) }}">
-                                    {{ category.name }} ({{ category.articles.count }})</a>
+                                    {{ category.name }}</a>
                             </li>
                         </ul>
                     </div>
@@ -18,26 +18,12 @@
             </div>
             <div class="col-md-10">
                 <div class="col-md-10">
-                    <h1>Pinned article</h1>
-                        {% for category in categories %}
-                            {% if category.name == "Featured" %}
-                                {% for article in category.name %}
-                                    <article>
-                                        <header>
-                                            <h2>{{ article.title }}</h2>
-                                        </header>
-                                        <p>
-                                            {{ article.content }}
-                                        </p>
-                                        <small class="author">
-                                            {{ article.author }}
-                                        </small>
-                                    </article>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
+                    <h1>Обекти за настаняване в България</h1>
+                        <p>Добре дошли на нашия блог. Тук можете да намерите полезна информация за обектите за настаняване в България. Може да търсите обекти по ключова дума или по дестинация от менюто вляво. </p>
+                        <p>Ако искате да качите информация за своя обект, първо трябва да си направите регистрация като потребител, а след това да създадете нова статия. Можете да редактирате по всяко време данните за своя обект след като отидете на бутона Edit.</p>
                 </div>
                     <div class="col-md-10">
+                        <h2>Разглеждане на обекти по ключова дума</h2>
                         {% embed "blog/front-images.html.twig" %}
                         {% endembed %}
                     </div>
@@ -45,23 +31,14 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h2>List</h2>
-                {% for category in categories %}
-                    <div class="col-md-10">
-                        <ul>
-                            <li>
-                                <a href="{{ path('category_articles', {'id': category.id}) }}">
-                                    {{ category.name }} ({{ category.articles.count }})</a>
-                            </li>
-                        </ul>
-                    </div>
-                {% endfor %}
+                <h2>Прогноза</h2>
+                {% embed "blog/weather.html.twig" %}
+                {% endembed %}
             </div>
             <div class="col-md-10">
+                <h2>Търсене на обекти по карта</h2>
                 {% embed "blog/map.html.twig" %}
                 {% endembed %}
-
-
             </div>
         </div>
     </div>
