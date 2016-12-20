@@ -32,8 +32,14 @@
                             <a class="btn btn-danger btn-xs" href="{{ path('article_delete', {'id': article.id}) }}">Delete &raquo;</a>
                             {% endif %}
 
-                            <a class="btn btn-default btn-xs" href="{{ path('blog_index') }}">back &raquo;</a>
+                            <a class="btn btn-default btn-xs" href="{{ path('category_articles', {'id': article.categoryId}) }}">back &raquo;</a>
                         </div>
+
+                        <div style="padding-top: 50px">
+                            {% embed "blog/bookingaff.html.twig" %}
+                            {% endembed %}
+                        </div>
+
                     </footer>
                 </article>
             </div>
