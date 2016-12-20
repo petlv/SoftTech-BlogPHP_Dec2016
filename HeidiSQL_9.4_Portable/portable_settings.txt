@@ -84,4 +84,5 @@ Servers\Unnamed\lastUsedDB<|||>1<|||>blog
 Servers\Unnamed\FavoriteObjects<|||>1<|||>mysql||func<{{{><}}}>
 Servers\Unnamed\RefusedCount<|||>3<|||>1
 Servers\Unnamed\blog|articles\Sort<|||>1<|||>1_id|1_authorId|
+Servers\Unnamed\blog|categories\Sort<|||>1<|||>0_id|
 Servers\Unnamed\blog|tags\Sort<|||>1<|||>0_id|

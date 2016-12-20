@@ -40,6 +40,6 @@ class HomeController extends Controller
         $articles = $category->getArticles()->toArray();
 
         return $this->render('article/list.html.twig',
-            ['articles' => $articles]);
+            ['articles' => $articles, 'category' => $category]);
     }
 }

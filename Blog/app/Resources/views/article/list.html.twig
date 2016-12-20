@@ -3,6 +3,7 @@
 {% block main %}
     <div class="container body-content">
         <div class="row">
+            <h4>Вие се намирате в категория: <strong>{{ category.name }}</strong></h4>
             {% for article in articles %}
                 <div class="col-md-6">
                     <article>
@@ -34,6 +35,10 @@
                     </article>
                 </div>
             {% endfor %}
+        </div>
+        <div class="p-3">
+            <h3>Любопитно</h3>
+            <iframe src="http://obikolisveta.net/ImageRotator/ImageRotator.php" frameborder="0" marginwidth="0" marginheight="0" style="border: 5px; overflow:auto; width:50%; height:80px;"></iframe>
         </div>
     </div>
 {% endblock %}
